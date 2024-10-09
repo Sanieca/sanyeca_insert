@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Table</title>
+    <style>
+        body {
+            background-color: rgb(224, 188, 215);
+            color: pink;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid pink;
+        }
+
+        th {
+            background-color: #333;
+            color: pink;
+            font-size: 16px;
+        }
+
+        td {
+            background-color: #444;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #555;
+        }
+
+        table {
+            border: 2px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stocks</th>
+            <th>Description</th>
+        </tr>
+        <% information.forEach(info => { %>
+        <tr>
+            <td><%= info.product_name %></td>
+            <td><%= info.category %></td>
+            <td><%= info.price %></td>
+            <td><%= info.Stocks %></td>
+            <td><%= info.description %></td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
